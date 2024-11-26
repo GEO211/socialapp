@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapgram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Snapgram">
+                <h1>Snapgram</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="main.html" class="active"><i class="icon-home"></i>Home</a></li>
+                <li><a href="#"><i class="icon-explore"></i>Explore</a></li>
+                <li><a href="#"><i class="icon-people"></i>People</a></li>
+                <li><a href="liked.html"><i class="icon-saved"></i>Saved</a></li>
+                <li><a href="#" id="create-post-btn"><i class="icon-create"></i>Create Post</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="default-avatar.png" alt="User Avatar" class="avatar">
+                <span class="username">Username</span>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Posts">
+            </div>
+            <h2>Home Feed</h2>
+            <div id="posts-container" class="posts-grid">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </main>
+        <aside class="top-creators">
+            <h3>Top Creators</h3>
+            <ul id="top-creators-list">
+                <!-- Top creators will be dynamically added here -->
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div id="create-post-modal" class="modal">
+        <div class="modal-content">
+            <h2>Create New Post</h2>
+            <form id="create-post-form">
+                <input type="file" accept="image/*" required>
+                <textarea placeholder="Write a caption..." required></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Posts - Snapgram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Same sidebar as in main.html -->
+        </nav>
+        <main class="main-content">
+            <h2>Liked Posts</h2>
+            <div id="liked-posts-container" class="posts-grid">
+                <!-- Liked posts will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="liked.js"></script>
+</body>
+</html>
+
